@@ -313,6 +313,9 @@ Sequenza_CNAqc = function(sample_id,
       break
   }
 
+  # Save cumulative pipeline results
+  saveRDS(L_cache, file = "pipeline.rds")
+
   if(!("QC" %in% names(L_cache))) cli::cli_abort("CNAqc cannot run on this sample. Aborting the pipeline.")
     
   # End of pipeline
@@ -356,9 +359,6 @@ Sequenza_CNAqc = function(sample_id,
       ncol = 1) %>% print()
   })
   dev.off()
-
-  # Save cumulative pipeline results
-  saveRDS(L_cache, file = "pipeline.rds")
 
   # Return summary table
   return(L_cache)
