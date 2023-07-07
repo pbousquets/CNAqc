@@ -57,6 +57,7 @@
 #' @importFrom ggplot2 unit
 #' @importFrom ggplot2 xlim
 #' @importFrom ggplot2 ylim
+#' @importFrom(ggplot2,ggtitle)
 #' @importFrom graphics hist
 #' @importFrom grDevices dev.off
 #' @importFrom grDevices pdf
